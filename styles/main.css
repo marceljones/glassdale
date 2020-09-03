@@ -1,0 +1,43 @@
+body {
+    background-color: whitesmoke;
+}
+
+h2 {
+    text-align: center;
+    color: whitesmoke;
+    border: solid orangered;
+    background-color: orangered;
+    margin: .05em;
+    padding: .05em;
+    
+}    
+ 
+    
+
+.officersContainer {
+    display: flex;
+    flex: 3;
+    flex-wrap: wrap;
+}
+
+.criminalsContainer {
+    display: flex;
+    flex: 3;
+    flex-wrap: wrap;
+}
+
+.card-officer {
+    flex-basis: 25%;
+    
+    border: solid orangered;
+    margin: .5em;
+    padding: .5em;
+}
+
+.card-criminal {
+    flex-basis: 16%;
+    border: solid orangered;
+    margin: .5em;
+    padding: .5em;
+}
+
