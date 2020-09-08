@@ -1,17 +1,10 @@
 {
   "notes": [
     {
-      "noteText": "The pink note card is the most vibrant.",
+      "noteText": "What a Feeling!",
       "date": "Sept. 2",
       "suspect": "John Doe",
       "id": 1
-    },
-    
-    {
-      "noteText": "The blue note card is for boys.",
-      "date": "Sept. 3",
-      "suspect": "Mary Becker",
-      "id": 3
     }
   ]
 }

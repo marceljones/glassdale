@@ -6,14 +6,20 @@ import { getNotes, useNotes } from "./NoteProvider.js";
 import { NoteHTMLConverter } from "./Note.js";
 import { useCriminals } from "../criminals/CriminalProvider.js";
 
-const contentTarget = document.querySelector("#noteListContainer")
-const eventHub = document.querySelector("#main")
+const contentTarget = document.querySelector(".noteListContainer")
+const eventHub = document.querySelector(".container")
 
 const render = (notes) => {
     const criminals = useCriminals()
-    contentTarget.innerHTML = notes.map((noteObject) => {
-            return NoteHTMLConverter(noteObject)
-        }).join("");
+    let HTMLrender = notes.map((noteObject) => {
+        return NoteHTMLConverter(noteObject)
+    })
+    contentTarget.innerHTML = HTMLrender.join("");
+    
+    // contentTarget.innerHTML = notes.map((noteObject) => {
+    //         return NoteHTMLConverter(noteObject)
+    //      })     .join("");
+        
 }
 
 // This starts the process of getting the notes:  We get them, 
@@ -22,7 +28,7 @@ const render = (notes) => {
 export const NoteList = () => {
     getNotes()
         .then(useNotes)
-        .then(render)
+        // .then(render())
 }
 
 // Once the state has changed (SEE NOTEPROVIDER) get the 

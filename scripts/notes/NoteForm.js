@@ -3,8 +3,8 @@ import {saveNote} from "./NoteProvider.js";
 /*
 	A bunch of input boxes related to the note information
 */
-const eventHub = document.querySelector("#main");
-const contentTarget = document.querySelector("#noteFormContainer");
+const eventHub = document.querySelector(".container");
+const contentTarget = document.querySelector(".noteFormContainer");
 
 eventHub.addEventListener("click", clickEvent => {
 	if(clickEvent.target.id === "saveNote"){
@@ -19,17 +19,18 @@ eventHub.addEventListener("click", clickEvent => {
 				date: Date.now()
 			}
 // Change API state and application state
-			saveNote(newNote);
+		saveNote(newNote);
 
 		}else {
 			window.alert("Choose a Suspect");
 		}
-
-
-
 	}
 })
 
+eventHub.addEventListener("noteStateChanged", event => {
+	console.log("I heard an event")
+	render(useCriminals())
+})
 const render = (criminalArray) => {
     contentTarget.innerHTML = `
        <h3>New Note Details</h3>
@@ -37,13 +38,13 @@ const render = (criminalArray) => {
 		<select class="dropdown" id="noteForm--criminal">
 			<option value="0">Please select a criminal...</option>
 			${
-                criminalArray.map(criminalObject => {
-                    return `<option value="${criminalObject.name}">${criminalObject.name}</option>`
+				criminalArray.map(criminalObject => {
+					return `<option value="${criminalObject.name}">${criminalObject.name}</option>`
                 }).join("")
             }
-		</select>
-        <button id="saveNote">Save Note</button>
-    `
+			</select>
+			<button id="saveNote">Save Note</button>
+		`
 }
 
 export const NoteForm = () => {

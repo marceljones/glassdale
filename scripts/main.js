@@ -6,12 +6,14 @@ import {ConvictionSelect} from './convictions/ConvictionSelect.js';
 import { OfficerSelect } from "./officers/OfficerSelect.js";
 import { NoteForm } from './notes/NoteForm.js';
 import { NoteList } from './notes/NoteList.js';
+
 // OfficerList();
 CriminalList();
 ConvictionSelect();
 OfficerSelect();
 NoteForm();
 NoteList();
+
 
   
 // console.log("Good morning, Main.js");

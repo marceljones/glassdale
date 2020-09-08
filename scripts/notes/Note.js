@@ -3,7 +3,7 @@
 Take notes made and prepare to display on website
 */
 
-const eventHub = document.querySelector("#main")
+const eventHub = document.querySelector(".container")
 
 
 export const NoteHTMLConverter = (noteObject) => {
