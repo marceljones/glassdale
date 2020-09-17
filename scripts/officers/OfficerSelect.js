@@ -22,7 +22,7 @@ eventHub.addEventListener("change", changeEvent => {
 })
 
 export const officerList = () => {
-    gitOfficers()
+    getOfficers()
     .then(()=> {
         const officerArray = useOfficers();
         addOfficersToDOM(officerArray);
@@ -50,3 +50,9 @@ const render = allOfficers => {
     }
         </select>`
 }
+
+/*
+    ConvictionSelect component that renders a select HTML element
+    which lists all convictions in the Glassdale PD API
+ */
+

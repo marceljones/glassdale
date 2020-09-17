@@ -28,7 +28,7 @@ const render = (notes) => {
 export const NoteList = () => {
     getNotes()
         .then(useNotes)
-        // .then(render())
+        .then(render())
 }
 
 // Once the state has changed (SEE NOTEPROVIDER) get the 

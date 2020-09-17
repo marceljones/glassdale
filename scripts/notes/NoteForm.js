@@ -15,7 +15,7 @@ eventHub.addEventListener("click", clickEvent => {
 		if(noteCriminal.value !== "0"){
 			const newNote = {
 				noteText: noteContent.value,
-				suspect: noteCriminal.value,
+				suspectId: noteCriminal.value,
 				date: Date.now()
 			}
 // Change API state and application state
@@ -39,7 +39,7 @@ const render = (criminalArray) => {
 			<option value="0">Please select a criminal...</option>
 			${
 				criminalArray.map(criminalObject => {
-					return `<option value="${criminalObject.name}">${criminalObject.name}</option>`
+					return `<option value="${criminalObject.id}">${criminalObject.name}</option>`
                 }).join("")
             }
 			</select>

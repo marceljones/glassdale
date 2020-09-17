@@ -1,8 +1,9 @@
-body {
+
+/* body {
     background-color: whitesmoke;
 }
 
-h2 {
+    h2 {
     text-align: center;
     color: whitesmoke;
     border: solid orangered;
@@ -10,7 +11,7 @@ h2 {
     margin: .05em;
     padding: .05em;
     
-}    
+}      
  
     
 
@@ -41,3 +42,114 @@ h2 {
     padding: .5em;
 }
 
+.noteListContainer {
+    justify-content: right;
+    border-color: black;
+    margin-right: 5em;
+    background-color: teal;
+    height: auto;
+    width: fit-content;
+}
+
+/* aside {
+	flex: 1;
+	background-color: rgb(0, 59, 101);
+	color: lightblue;
+	padding: 1em;
+} */ */
+
+  
+body {
+	background-color: whitesmoke;
+}
+h2 {
+    text-align: center;
+    color: whitesmoke;
+    border: solid orangered;
+    background-color: orangered;
+    margin: .05em;
+    padding: .05em;
+    
+}  
+
+h4 {
+    text-align: center;
+    color: whitesmoke;
+}
+/* h2 {
+    text-align: center;
+    color: whitesmoke;
+    border: solid orangered;
+    background-color: orangered;
+    margin:0em;
+    padding: 0em;
+     */
+     
+.filters {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+}
+
+#noteFormContainer {
+	background-color: rgb(217, 224, 232);
+	padding: 1em;
+}
+
+#noteFormContainer h1, h2  {
+	color: rgb(80 42 5);
+	margin-top: .02em;
+}
+
+textarea {
+	width: 100%;
+}
+
+h3 {
+    color:  orangered;
+}
+
+
+
+.note {
+	margin: 5em auto;
+}
+
+.main-section {
+	display: flex;
+}
+.lists-area {
+	background-color: whitesmoke;
+	flex: 3;
+    padding: 5rem;
+    
+}
+/* aside {
+    color: whitesmoke;
+	background-color: sandybrown;
+	flex: .75;
+    padding: 8rem;
+    margin-right: 1em; */
+
+.card-criminal {
+    flex-basis: 20%;
+    border: solid orangered;
+    margin: .5em;
+    padding: .5em;
+}
+
+.criminalsContainer {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	padding: 0;
+	margin: 0;
+}
+
+aside {
+	flex: .75;
+	background-color: rgb(0, 59, 101);
+	color: lightblue;
+    padding: 8rem;
+    margin-right: 1em;
+} 
